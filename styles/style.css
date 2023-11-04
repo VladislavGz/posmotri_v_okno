@@ -12,7 +12,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     inline-size: 1200px;
     block-size: 100%;
     margin: auto;
@@ -102,11 +102,12 @@ ol {
 
     inline-size: 711px;
     block-size: 386px;
-    overflow: hidden;
 }
 
 .result__video {
-    inline-size: 100%;
+    inline-size: inherit;
+    block-size: inherit;
+    object-fit: fill;
 }
 
 /*search-form-----------------------------------------------------------------------------------------*/
@@ -147,7 +148,6 @@ ol {
     width: fit-content;
 
     cursor: pointer;
-    
 }
 
 .search-form__label:has(:focus-visible) {
