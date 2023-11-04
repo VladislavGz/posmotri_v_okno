@@ -9,8 +9,12 @@ html {
 }
 
 .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     inline-size: 1200px;
-    /*block-size: 100%;*/
+    block-size: 100%;
     margin: auto;
     color: #fff;
     font-family: 'Fira Sans Condensed', sans-serif;
@@ -80,8 +84,6 @@ ol {
     gap: 30px;
     align-items: end;
 
-    margin-block-start: 137px;
-    margin-inline: auto;
     max-inline-size: 1140px;
     max-block-size: 534px;
 
