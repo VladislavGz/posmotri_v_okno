@@ -51,7 +51,7 @@ ol {
 
     color: #FFF;
     text-align: center;
-    font-family: Fira Sans Condensed;
+    font-family: 'Fira Sans Condensed', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -65,6 +65,7 @@ ol {
 }
 
 .button:active {
+    text-decoration: none;
     background-color: #545050;
 }
 
@@ -88,7 +89,7 @@ ol {
     max-block-size: 534px;
 
     color: #FFF;
-    font-family: Fira Sans Condensed;
+    font-family: 'Fira Sans Condensed', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -159,6 +160,10 @@ ol {
     text-decoration: underline;
 }
 
+.search-form__label:active:has(.search-form__pseudo-checkbox) {
+    text-decoration: none;
+}
+
 .search-form__textfield {
     appearance: none;
     inline-size: 100%;
@@ -199,7 +204,7 @@ ol {
     border: 1px solid #fff;
 }
 
- .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before, .search-form__label:active > .search-form__pseudo-checkbox::before {
     content: "";
     width: 15px;
     height: 15px;
@@ -211,7 +216,7 @@ ol {
     align-self: flex-end;
 
     inline-size: 194px;
-    block-size: 34px;
+    min-block-size: 34px;
 }
 
 /*content__details-----------------------------------------------------------------------------------------*/
@@ -219,7 +224,7 @@ ol {
     margin-block-end: 20px;
 
     color: #FFF;
-    font-family: Oswald;
+    font-family: 'Oswald', sans-serif;
     font-size: 75px;
     font-style: normal;
     font-weight: 700;
@@ -233,14 +238,14 @@ ol {
 
 .content__list {
     position: relative;
-    inline-size: 399px;
+    padding-inline-end: 10px;
     block-size: 298px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: auto;
 }
 
 .content__list-item:not(:last-child) {
     margin-block-end: 34px;
+    min-inline-size: 399px;
 }
 
 .content__card-link {
@@ -275,11 +280,15 @@ ol {
 .content__video-card {
     display: flex;
     justify-content: space-between;
-    align-content: flex-start;
+}
+
+.content__video-card-description-container {
+    flex-grow: 1;
 }
 
 .content__video-card-title {
     margin-block-start: 4px;
+    max-inline-size: 200px;
 
     color: #FFF;
     font-family: Oswald;
@@ -292,6 +301,7 @@ ol {
 
 .content__video-card-description {
     margin-block-start: 3px;
+    max-inline-size: 200px;
 
     color: #FFF;
     font-family: Fira Sans Condensed;
@@ -301,16 +311,14 @@ ol {
 .content__video-card-thumbnail {
     inline-size: 194px;
     block-size: 103px;
-}
-
-.content__video-card-description {
-    inline-size: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .more-button {
     margin: 2px;
     inline-size: 100%;
-    block-size: 34px;
+    min-block-size: 34px;
 }
 
 /*visually-hidden-------------------------------------------------------------------------------------------------------*/
