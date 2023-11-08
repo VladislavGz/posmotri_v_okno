@@ -118,7 +118,7 @@ ol {
     justify-content: space-between;
 
     color: #FFF;
-    font-family: Fira Sans Condensed;
+    font-family: 'Fira Sans Condensed', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -291,7 +291,7 @@ ol {
     max-inline-size: 200px;
 
     color: #FFF;
-    font-family: Oswald;
+    font-family: 'Oswald', sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -304,7 +304,7 @@ ol {
     max-inline-size: 200px;
 
     color: #FFF;
-    font-family: Fira Sans Condensed;
+    font-family: 'Fira Sans Condensed', sans-serif;
     line-height: 0.9;
 }
 
